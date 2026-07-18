@@ -1,258 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>InFovea | Governed Cognitive Infrastructure</title>
+<meta name="description" content="InFovea is Governed Cognitive Infrastructure designed to improve the quality of professionally accountable decisions.">
+<meta name="theme-color" content="#050505">
 
-    <meta
-        name="viewport"
-        content="width=device-width, initial-scale=1"
-    >
+<link rel="icon" type="image/x-icon" href="favicon.ico">
+<link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
+<link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
+<link rel="manifest" href="site.webmanifest">
 
-    <title>InFovea | Governed Cognitive Infrastructure</title>
-
-    <meta
-        name="description"
-        content="InFovea is Governed Cognitive Infrastructure designed to improve the quality of professionally accountable decisions."
-    >
-
-    <meta name="theme-color" content="#050505">
-
-    <link rel="icon" type="image/x-icon" href="favicon.ico">
-    <link rel="icon" type="image/png" sizes="32x32" href="favicon-32x32.png">
-    <link rel="icon" type="image/png" sizes="16x16" href="favicon-16x16.png">
-    <link rel="apple-touch-icon" sizes="180x180" href="apple-touch-icon.png">
-    <link rel="manifest" href="site.webmanifest">
-
-    <style>
-        :root {
-            color-scheme: dark;
-
-            --background: #050505;
-            --foreground: #f4f4f2;
-            --muted: #a8a8a4;
-            --subtle: #676763;
-            --line: rgba(255, 255, 255, 0.08);
-        }
-
-        * {
-            box-sizing: border-box;
-        }
-
-        html {
-            min-height: 100%;
-            background: var(--background);
-        }
-
-        body {
-            min-height: 100vh;
-            margin: 0;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-
-            padding: 40px 24px;
-
-            background:
-                radial-gradient(
-                    circle at 50% 42%,
-                    rgba(255, 255, 255, 0.05),
-                    transparent 30%
-                ),
-                radial-gradient(
-                    circle at 46% 38%,
-                    rgba(48, 144, 201, 0.035),
-                    transparent 24%
-                ),
-                radial-gradient(
-                    circle at 55% 40%,
-                    rgba(91, 199, 84, 0.025),
-                    transparent 25%
-                ),
-                var(--background);
-
-            color: var(--foreground);
-
-            font-family:
-                Inter,
-                -apple-system,
-                BlinkMacSystemFont,
-                "Segoe UI",
-                Helvetica,
-                Arial,
-                sans-serif;
-
-            -webkit-font-smoothing: antialiased;
-            text-rendering: optimizeLegibility;
-        }
-
-        main {
-            width: 100%;
-            max-width: 980px;
-            text-align: center;
-
-            transform: translateY(-36px);
-            animation: reveal 850ms ease-out both;
-        }
-
-        .logo {
-            width: clamp(112px, 10vw, 146px);
-            height: auto;
-            display: block;
-
-            margin: 0 auto 18px;
-
-            filter:
-                drop-shadow(0 14px 28px rgba(0, 0, 0, 0.34))
-                drop-shadow(0 0 18px rgba(255, 255, 255, 0.035));
-        }
-
-        h1 {
-            margin: 0;
-
-            font-size: clamp(4.2rem, 9vw, 7.25rem);
-            font-weight: 650;
-            line-height: 0.94;
-            letter-spacing: -0.068em;
-        }
-
-        .category {
-            margin: 32px 0 0;
-
-            font-size: clamp(0.88rem, 1.8vw, 1.18rem);
-            font-weight: 550;
-            line-height: 1.5;
-
-            letter-spacing: 0.17em;
-            text-transform: uppercase;
-
-            color: #dededb;
-        }
-
-        .statement {
-            max-width: 800px;
-            margin: 27px auto 0;
-
-            font-size: clamp(1.3rem, 2.8vw, 2rem);
-            font-weight: 300;
-            line-height: 1.46;
-
-            color: var(--muted);
-        }
-
-        .divider {
-            width: 42px;
-            height: 1px;
-
-            margin: 42px auto 0;
-
-            border: 0;
-            background: var(--line);
-        }
-
-        .positioning {
-            max-width: 760px;
-            margin: 24px auto 0;
-
-            font-size: clamp(0.72rem, 1.4vw, 0.82rem);
-            font-weight: 500;
-            line-height: 1.8;
-
-            letter-spacing: 0.14em;
-            text-transform: uppercase;
-
-            color: var(--subtle);
-        }
-
-        footer {
-            margin-top: 60px;
-
-            font-size: 0.76rem;
-            line-height: 1.6;
-
-            color: #50504d;
-        }
-
-        @keyframes reveal {
-            from {
-                opacity: 0;
-                transform: translateY(8px);
-            }
-
-            to {
-                opacity: 1;
-                transform: translateY(0);
-            }
-        }
-
-        @media (prefers-reduced-motion: reduce) {
-            main {
-                animation: none;
-            }
-        }
-
-        @media (max-width: 640px) {
-            body {
-                padding: 32px 20px;
-            }
-
-            main {
-                transform: none;
-            }
-
-            .logo {
-                margin-bottom: 16px;
-            }
-
-            .category {
-                margin-top: 27px;
-                letter-spacing: 0.11em;
-            }
-
-            .statement {
-                margin-top: 23px;
-            }
-
-            .divider {
-                margin-top: 36px;
-            }
-
-            footer {
-                margin-top: 48px;
-            }
-        }
-    </style>
+<style>
+:root{
+ --background:#050505;
+ --foreground:#f4f4f2;
+ --muted:#c4c4c2;
+ --subtle:#676763;
+ --line:rgba(255,255,255,.08);
+ color-scheme:dark;
+}
+*{box-sizing:border-box}
+html{background:var(--background)}
+body{
+ margin:0;
+ min-height:100vh;
+ display:flex;
+ align-items:center;
+ justify-content:center;
+ padding:40px 24px;
+ background:
+ radial-gradient(circle at 50% 42%,rgba(255,255,255,.05),transparent 30%),
+ radial-gradient(circle at 46% 38%,rgba(48,144,201,.035),transparent 24%),
+ radial-gradient(circle at 55% 40%,rgba(91,199,84,.025),transparent 25%),
+ var(--background);
+ color:var(--foreground);
+ font-family:Inter,-apple-system,BlinkMacSystemFont,"Segoe UI",Helvetica,Arial,sans-serif;
+ -webkit-font-smoothing:antialiased;
+ text-rendering:optimizeLegibility;
+}
+main{
+ max-width:980px;
+ width:100%;
+ text-align:center;
+ transform:translateY(-36px);
+ animation:fade .8s ease-out both;
+}
+.logo{
+ width:clamp(112px,10vw,146px);
+ display:block;
+ margin:0 auto 18px;
+ filter:drop-shadow(0 14px 28px rgba(0,0,0,.34))
+        drop-shadow(0 0 28px rgba(255,255,255,.05));
+}
+h1{
+ margin:0;
+ font-size:clamp(4.2rem,9vw,7.25rem);
+ font-weight:650;
+ line-height:.94;
+ letter-spacing:-.068em;
+}
+.category{
+ margin:24px 0 0;
+ font-size:clamp(.88rem,1.8vw,1.18rem);
+ font-weight:550;
+ letter-spacing:.17em;
+ text-transform:uppercase;
+ color:#dededb;
+}
+.statement{
+ max-width:800px;
+ margin:28px auto 0;
+ font-size:clamp(1.3rem,2.8vw,2rem);
+ font-weight:300;
+ line-height:1.46;
+ color:var(--muted);
+}
+.divider{
+ width:42px;
+ height:1px;
+ margin:42px auto 0;
+ border:0;
+ background:var(--line);
+}
+.positioning{
+ margin:24px auto 0;
+ font-size:clamp(.72rem,1.4vw,.82rem);
+ font-weight:500;
+ letter-spacing:.14em;
+ text-transform:uppercase;
+ color:var(--subtle);
+}
+footer{
+ margin-top:60px;
+ font-size:.76rem;
+ color:#50504d;
+}
+@keyframes fade{
+ from{opacity:0;transform:translateY(8px)}
+ to{opacity:1;transform:translateY(0)}
+}
+@media(max-width:640px){
+ main{transform:none}
+ body{padding:32px 20px}
+}
+</style>
 </head>
-
 <body>
-    <main>
-        <img
-            class="logo"
-            src="infovea-symbol.svg"
-            alt="InFovea"
-            width="146"
-            height="146"
-        >
+<main>
+<img class="logo" src="infovea-symbol.svg" alt="InFovea logo">
+<h1>InFovea</h1>
 
-        <h1>InFovea</h1>
+<p class="category">Governed Cognitive Infrastructure</p>
 
-        <p class="category">
-            Governed Cognitive Infrastructure
-        </p>
+<p class="statement">
+Improving the quality of professionally accountable decisions.
+</p>
 
-        <p class="statement">
-            Improving the quality of professionally accountable decisions.
-        </p>
+<hr class="divider">
 
-        <hr class="divider">
+<p class="positioning">
+Built for Professional Judgement
+</p>
 
-        <p class="positioning">
-            Built for Professional Judgement
-        </p>
-
-        <footer>
-            &copy; 2026 InFovea
-        </footer>
-    </main>
+<footer>&copy; 2026 InFovea</footer>
+</main>
 </body>
 </html>
